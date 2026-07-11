@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Body */
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6f90b6,#764ba2);
+    padding:20px;
+}
+
+/* Main Heading */
+h1{
+    color:#fff;
+    font-size:48px;
+    margin-bottom:10px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.3);
+}
+
+/* Subtitle */
+p{
+    color:#f3f3f3;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+/* Input + Button */
+#todo-input{
+    width:420px;
+    max-width:90%;
+    padding:15px;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+#todo-input:focus{
+    transform:scale(1.02);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* Add Button */
+#add-btn{
+    margin-top:15px;
+    padding:14px 35px;
+    border:none;
+    border-radius:12px;
+    background:#00c853;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+#add-btn:hover{
+    background:#00b248;
+    transform:translateY(-3px);
+}
+
+/* Todo List */
+#todo-list{
+    width:500px;
+    max-width:95%;
+    list-style:none;
+    margin-top:35px;
+}
+
+/* Todo Card */
+#todo-list li{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:15px 18px;
+
+    margin-bottom:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+    animation:slide .3s ease;
+}
+
+#todo-list li:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* Animation */
+
+@keyframes slide{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Checkbox */
+
+#todo-list input[type="checkbox"]{
+
+    width:20px;
+
+    height:20px;
+
+    cursor:pointer;
+
+}
+
+/* Todo Text */
+
+#todo-list span{
+
+    flex:1;
+
+    margin-left:15px;
+
+    font-size:18px;
+
+    color:#333;
+
+    word-break:break-word;
+
+}
+
+/* Delete Button */
+
+#todo-list button{
+
+    background:#ff4d4d;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+#todo-list button:hover{
+
+    background:#e60000;
+
+    transform:scale(1.05);
+
+}
+
+/* Completed Todo */
+
+.completed{
+
+    text-decoration:line-through;
+
+    color:#888;
+
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    p{
+
+        text-align:center;
+
+        font-size:15px;
+
+    }
+
+    #todo-input{
+
+        width:100%;
+
+    }
+
+    #add-btn{
+
+        width:100%;
+
+    }
+
+    #todo-list{
+
+        width:100%;
+
+    }
+
+    #todo-list li{
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+    }
+
+    #todo-list span{
+
+        width:100%;
+
+        margin-left:0;
+
+    }
+
+}
